@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <h1>Homework</h1>
+    <input type="number" id="first" />
+    <input type="number" id="second" />
+    <button onclick="submit()">Submit</button>
+    <script>
+      function submit() {
+        var x = document.getElementById("first").value;
+        console.log(x);
+        var y = document.getElementById("second").value;
+        for (z = 0; +x <= +y; x++) {
+          z = +z + +x;
+          console.log(z);
+        }
+        document.getElementById("answer").innerHTML = z;
+      }
+    </script>
+    <p id="answer"></p>
+  </body>
+</html>

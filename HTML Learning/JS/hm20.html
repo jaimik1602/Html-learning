@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Homework</h1>
+    <input type="number" id="first" >
+    <button onclick="submit()">Submit</button>
+    <script>
+        function submit(){
+            var x = document.getElementById("first").value;
+            const answer = [0,1];
+            var text;
+            for(i=2,j=0;j<x;j++,i++){
+                answer[i] = answer[i-1] + answer[i-2];
+                //text = answer[j] + "<br>";
+                document.write(answer[j] + " ");         
+            }
+            document.getElementById("answer").innerHTML = text;
+        }
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

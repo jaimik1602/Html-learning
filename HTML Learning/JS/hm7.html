@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Homework</h1>
+    <input type="text" id="first">
+    <button onclick="checkvalue()">Submit</button>
+    <script>
+        function checkvalue(){
+        const x = document.getElementById('first');
+        console.log(x);
+        const y = x.value;
+        let length = y.length;
+        let txt = "";
+        if(length>=6 && length<=12){
+            for(var i=0; i<length; i++){
+                  txt = txt + (y[i] + "<br>");
+             }
+        }
+        else{
+            alert("Value unvalid.");
+        }
+        document.getElementById("answer").innerHTML = txt;
+     }
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

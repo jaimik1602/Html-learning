@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <h1>Homework</h1>
+    <input type="text" id="first" />
+    <button onclick="run()">Submit</button>
+    <script>
+      function run() {
+        const x = document.getElementById("first");
+        let length = x.value.length;
+        let txt = "";
+        for (i = 0; i < length; i++) {
+          txt = txt + (x.value.slice(i, i + 1) + "<br>");
+        }
+        document.getElementById("answer").innerHTML = txt;
+      }
+    </script>
+    <p id="answer"></p>
+  </body>
+</html>

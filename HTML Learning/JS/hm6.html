@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <input type="text" id="first">
+    <input type="text" id="second">
+    <button onclick="join()">Submit</button>
+    <script>
+        const x = document.getElementById("first");
+        const y = document.getElementById("second");
+        function join(){
+            
+        const z = x.value + y.value;
+        document.getElementById("answer").innerHTML = z;
+
+        }
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <h1>Homework</h1>
+    <input type="text" id="number" oninput="submit()" />
+    <!-- <button onclick="submit()">Submit</button> -->
+    <script>
+      function submit() {
+        const number = document.getElementById("number").value;
+        var numlen = number.length;
+        var c = "";
+        for (i = 0; i < numlen; i++) {
+          if (
+            number[i] == "+" ||
+            number[i] == "-" ||
+            number[i] == "*" ||
+            number[i] == "/" ||
+            number[i] == "%"
+          ) {
+            var a = number.slice(0, i);
+            var b = number.slice(i + 1, numlen + 1);
+            c = number[i] + c;
+          } else {
+            document.getElementById("answer").innerHTML = "Enter any sing.";
+          }
+        }
+        var singlen = c.length;
+        console.log(singlen);
+        if(singlen>1){
+
+        }
+
+
+
+
+        if (singlen <= 1) {
+          if (c == "+") {
+            document.getElementById("answer").innerHTML = +a + +b;
+          } else if (c == "-") {
+            document.getElementById("answer").innerHTML = +a - +b;
+          } else if (c == "*") {
+            document.getElementById("answer").innerHTML = +a * +b;
+          } else if (c == "/") {
+            document.getElementById("answer").innerHTML = +a / +b;
+          } else if (c == "%") {
+            document.getElementById("answer").innerHTML = +a % +b;
+          } else {
+            document.getElementById("answer").innerHTML = "sing not found.";
+          }
+        } else {
+        }
+      }
+    </script>
+    <p id="answer"></p>
+  </body>
+</html>

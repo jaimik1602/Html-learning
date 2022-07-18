@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS Page</title>
+</head>
+<body>
+    <h2 align="center">Welcome to the first JS included html Page.</h2>
+    <h1 align="center" id="h2">Hello</h1>
+    <script>
+        function ChangeH(){
+            document.getElementById("h2").innerHTML = "World";  
+            window.alert("Hello Changed.");
+            console.log("Hello Changed.");            
+        }
+        function ChangeW(){
+            document.getElementById("h2").innerHTML = "Hello"; 
+            window.alert("World Changed.");     
+            console.log("World Changed.");  
+        }
+    </script>
+    <!-- <h2>To change "Hello" Click the button</h2> -->
+   <p align="center">
+    <button onclick="ChangeH()">Click to Change "Hello"</button>
+    <button onclick="ChangeW()">Click to Change "World"</button>
+    <br><br>
+    <button onclick="window.print()">Print this page</button>
+   </p>
+</body>
+</html> 

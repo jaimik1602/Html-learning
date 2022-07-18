@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Fahrenheit to Celsius</h1>
+    <input type="number" id="fah" placeholder="Enter Fahrenheit">
+    <button onclick="convertvalue()">Convert</button>
+    <script>
+        const f = document.getElementById('fah');
+        var cel;
+    
+        function convertvalue(){
+             cel = (5/9) * (f.value-32);
+             console.log(cel);
+             document.getElementById('answer').innerHTML = "Answer = " + cel;
+            }
+       
+        
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

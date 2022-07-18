@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <input type="number" id="number">
+    <button onclick="submit()">Submit</button>
+    <script>
+        function submit(){
+            const x = document.getElementById("number").value;
+            for(i=0,y = 0;i<=x;i++){
+                    y = y+i;
+            }
+            document.getElementById("answer").innerHTML = y;
+        }
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Check Year is leap year or not?</h1>
+    <input type="number" id="year">
+    <button onclick="check()">Submit</button>
+    <script>
+        function check(){
+            const x = document.getElementById("year").value;
+            let y = x%4;
+            if(y>0){
+                document.getElementById("answer").innerHTML = "Not a leap Year."
+            }
+            if(y==0){
+                document.getElementById("answer").innerHTML = "Leap Year."
+            }
+        }
+    </script>
+    <p id="answer"></p>
+</body>
+</html>

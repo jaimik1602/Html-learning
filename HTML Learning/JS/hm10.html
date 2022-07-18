@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Check Your Age:-</h1>
+    <input type="number" id="age">
+    <button onclick="check()">Submit</button>
+    <script>
+        function check(){
+            const x = document.getElementById("age").value;
+            if(x>=18){
+                document.getElementById("answer").value = "You can Marry."
+            }
+            if(x<18){
+                document.getElementById("answer").value = "You cannot Marry."
+            }
+        }
+    </script>
+    <input type="text" id="answer">
+</body>
+</html>

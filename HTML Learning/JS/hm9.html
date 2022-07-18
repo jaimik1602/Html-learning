@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        input{
+            margin: 5px;
+        }
+        button{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Result</h1>
+    <input type="number" id="eng" placeholder="English"><br>
+    <input type="number" id="guj" placeholder="Gujarati"><br>
+    <input type="number" id="sci" placeholder="Science"><br>
+    <input type="number" id="math" placeholder="Maths"><br>
+    <input type="number" id="hindi" placeholder="Hindi"><br>
+    <button id="submit" onclick="submit()">Submit</button>
+    <script>
+        function submit(){
+            const eng = document.getElementById("eng").value;
+            const guj = document.getElementById("guj").value;
+            const sci = document.getElementById("sci").value;
+            const math = document.getElementById("math").value;
+            const hindi = document.getElementById("hindi").value;
+            let total = +eng + +guj + +sci + +math + +hindi;
+            let per = total/5;
+            if(per>=80){
+                var grade = "A Grade."
+            }
+            if(per>=60){
+                var grade = "B Grade."
+            }
+            if(per>=40){
+                var grade = "C Grade."
+            }
+            if(per<40){
+                var grade = "Fail."
+            }
+            document.getElementById("result").innerHTML = "English :- " + eng + "<br>" + "Gujarati :- " + guj + "<br>" + "Science :- " + sci + "<br>" + "Maths :- " + math + "<br>" + "Hindi :- " + hindi + "<br>" + "Total :- " + total + "<br>" + "Percentage" + per + "<br>" + "Grade :- " + grade;
+        }
+    </script>
+    <p id="result"></p>
+</body>
+</html>

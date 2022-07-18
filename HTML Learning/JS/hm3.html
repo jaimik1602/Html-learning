@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+
+  <body>
+    <h1>Object:-</h1>
+    <p id="output"></p>
+    <script>
+      const shop = {
+        title: "Shoes",
+        price: 1500,
+        quantity: 10,
+        discountpercentage: 7.5,
+        total: function () {
+          return this.price * this.quantity;
+        },
+        discountedprice: function () {
+          var x = this.total() - (this.total() * this.discountpercentage) / 100;
+          return x;
+        },
+      };
+      document.getElementById("output").innerHTML =
+        "Item name:- " +
+        shop.title +
+        "<br>" +
+        "Price:- " +
+        shop.price +
+        "<br>" +
+        "Quantity:- " +
+        shop.quantity +
+        "<br>" +
+        "Total Price:- " +
+        shop.total() +
+        "<br>" +
+        "Discount:- " +
+        shop.discountpercentage +
+        "<br>" +
+        "Discounted Price:-" +
+        shop.discountedprice();
+    </script>
+  </body>
+</html>

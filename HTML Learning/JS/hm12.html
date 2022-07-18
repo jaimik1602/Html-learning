@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <h1>Homework</h1>
+    <input type="text" id="first" onchange="sum()" />
+    <input type="text" id="sing" onchange="sum()" />
+    <input type="text" id="second" onchange="sum()" /> = 
+    <input type="text" id="answer" />
+    <script>
+      function sum() {
+        const x = document.getElementById("first").value;
+        const y = document.getElementById("second").value;
+        const z = document.getElementById("sing").value;
+        if (z=="+") {
+          var answer = +x + +y;
+        } else if (z=="-") {
+          var answer = +x - +y;
+        } else if (z=="*") {
+          var answer = +x * +y;
+        } else if (z=="/") {
+          var answer = +x / +y;
+        } else if (z=="%") {
+          var answer = +x % +y;
+        } else {
+          var answer = "Enter Valid Sing.";
+        }
+        console.log(answer.value);
+        document.getElementById("answer").value = answer;
+      }
+    </script>
+  </body>
+</html>

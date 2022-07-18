@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS Page</title>
+    <style>
+        h3 {
+            text-align: center;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Select Your Color</h2>
+    <h3 onmouseover="setbgred()" onmouseout="setbgwhite()">Red</h3>
+    <h3 onmouseover="setbggreen()" onmouseout="setbgwhite()">Green</h3>
+    <h3 onmouseover="setbgyellow()" onmouseout="setbgwhite()">Yellow</h3>
+    <h3 onmouseover="setbgblue()" onmouseout="setbgwhite()">Blue</h3>
+    <h3 onmouseover="setbgbrown()" onmouseout="setbgwhite()">brown</h3>
+
+    <script>
+        function setbgred(){
+            document.body.style.backgroundColor = "red";
+        }
+        function setbggreen(){
+            document.body.style.backgroundColor = "green";
+        }
+        function setbgyellow(){
+            document.body.style.backgroundColor = "yellow";
+        }
+        function setbgblue(){
+            document.body.style.backgroundColor = "blue";
+        }
+        function setbgbrown(){
+            document.body.style.backgroundColor = "brown";
+        }
+        function setbgwhite(){
+            document.body.style.background = "white"
+        }
+    </script>
+</body>
+</html> 
